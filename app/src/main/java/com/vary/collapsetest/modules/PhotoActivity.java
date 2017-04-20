@@ -1,19 +1,16 @@
-package com.vary.collapsetest.modules.fragment;
+package com.vary.collapsetest.modules;
 
-import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.view.WindowManager;
 
+import com.lcodecore.tkrefreshlayout.header.bezierlayout.BezierLayout;
 import com.lcodecore.tkrefreshlayout.RefreshListenerAdapter;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
-import com.lcodecore.tkrefreshlayout.header.bezierlayout.BezierLayout;
 import com.vary.collapsetest.R;
 import com.vary.collapsetest.modules.adapter.PhotoAdapter;
 import com.vary.collapsetest.mvp.model.Photo;
@@ -21,45 +18,34 @@ import com.vary.collapsetest.mvp.model.Photo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Administrator on 2017-04-19.
- */
-
-public class MyFragment extends Fragment{
-
-  //  private TextView textView;
+public class PhotoActivity extends AppCompatActivity {
     private PhotoAdapter photoAdapter;
 
-    public static MyFragment getInstance(int position){
-        MyFragment myFragment = new MyFragment();
-        Bundle args = new Bundle();
-        args.putInt("position",position);
-        myFragment.setArguments(args);
-        return myFragment;
-    }
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View layout = inflater.inflate(R.layout.activity_photo, container, false);
-     //   textView = (TextView) layout.findViewById(R.id.position);
-        setupRecyclerView((RecyclerView) layout.findViewById(R.id.recyclerview),layout);
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-   //         textView.setText("The page Selected is "+bundle.getInt("position"));
-        }
-        return layout;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_photo);
+
+        setupRecyclerView((RecyclerView) findViewById(R.id.recyclerview));
+
+        findViewById(R.id.bt_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+   //     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
-
-    private void setupRecyclerView(RecyclerView rv, View layout) {
+    private void setupRecyclerView(RecyclerView rv) {
         rv.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         photoAdapter = new PhotoAdapter();
         rv.setAdapter(photoAdapter);
-        final TwinklingRefreshLayout refreshLayout = (TwinklingRefreshLayout) layout.findViewById(R.id.refresh);
+
+        final TwinklingRefreshLayout refreshLayout = (TwinklingRefreshLayout) findViewById(R.id.refresh);
 //        ProgressLayout headerView = new ProgressLayout(this);
-//        BezierLayout headerView = new BezierLayout(this);
-        BezierLayout headerView = new BezierLayout(getActivity());
+        BezierLayout headerView = new BezierLayout(this);
         refreshLayout.setHeaderView(headerView);
         refreshLayout.setMaxHeadHeight(140);
 //        refreshLayout.setFloatRefresh(true);
@@ -69,7 +55,7 @@ public class MyFragment extends Fragment{
 
 //        addHeader();
         refreshCard();
-        layout.findViewById(R.id.ib_refresh).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.ib_refresh).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 refreshLayout.startRefresh();
