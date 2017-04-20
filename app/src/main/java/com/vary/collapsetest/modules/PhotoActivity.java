@@ -55,12 +55,6 @@ public class PhotoActivity extends AppCompatActivity {
 
 //        addHeader();
         refreshCard();
-        findViewById(R.id.ib_refresh).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                refreshLayout.startRefresh();
-            }
-        });
 
         refreshLayout.setOnRefreshListener(new RefreshListenerAdapter() {
             @Override
