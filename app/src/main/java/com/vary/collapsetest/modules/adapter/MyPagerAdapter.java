@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.vary.collapsetest.modules.fragment.LeftFragment;
 import com.vary.collapsetest.modules.fragment.MyFragment;
+import com.vary.collapsetest.modules.fragment.RightFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter{
 
     public MyPagerAdapter(FragmentManager fm) {
         super(fm);
+        fragments.add(new RightFragment());
         fragments.add(new MyFragment());
         fragments.add(new LeftFragment());
     }
