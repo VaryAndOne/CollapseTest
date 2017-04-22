@@ -15,6 +15,7 @@ import com.vary.collapsetest.R;
 import com.vary.collapsetest.modules.adapter.FoodAdapter;
 import com.vary.collapsetest.modules.adapter.PersonAdapter;
 import com.vary.collapsetest.mvp.model.Food;
+import com.vary.collapsetest.mvp.model.Person;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
@@ -37,10 +38,6 @@ public class PersonActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView(RecyclerView rv) {
-        rv.addItemDecoration(
-                new HorizontalDividerItemDecoration.Builder(this)
-                        .color(R.color.white)
-                        .build());
         rv.setLayoutManager(new LinearLayoutManager(rv.getContext()));
         foodAdapter = new PersonAdapter();
         rv.setAdapter(foodAdapter);
@@ -51,7 +48,7 @@ public class PersonActivity extends AppCompatActivity {
         refreshLayout.setHeaderView(headerView);
 //        refreshLayout.setFloatRefresh(false);
         refreshLayout.setPureScrollModeOn();
-//        refreshLayout.setEnableOverlayRefreshView(false);
+ //       refreshLayout.setEnableOverlayRefreshView(false);
 //        refreshLayout.setAutoLoadMore(true);
 
         refreshCard();
@@ -59,13 +56,15 @@ public class PersonActivity extends AppCompatActivity {
     }
 
     void refreshCard() {
-        List<Food> foods = new ArrayList<>();
-        foods.add(new Food("Preparing Salmon Steak Close Up", "BY VIKTOR HANACEK", R.drawable.food1, R.drawable.avatar0));
-        foods.add(new Food("Fresh & Healthy Fitness Broccoli Pie with Basil", "BY VIKTOR HANACEK", R.drawable.food2, R.drawable.avatar1));
-        foods.add(new Food("Enjoying a Tasty Burger", "BY VIKTOR HANACEK", R.drawable.food3, R.drawable.avatar2));
-        foods.add(new Food("Fresh Strawberries and Blackberries in Little Bowl", "BY VIKTOR HANACEK", R.drawable.food4, R.drawable.avatar3));
-        foods.add(new Food("Baked Healthy Fitness Broccoli Pie with Basil", "BY VIKTOR HANACEK", R.drawable.food5, R.drawable.avatar4));
-        foodAdapter.setDataList(foods);
+        List<Person> persons = new ArrayList<>();
+        persons.add(new Person("相册",R.drawable.ic_camera_alt_black_24dp));
+        persons.add(new Person("群组",R.drawable.ic_group_black_24dp));
+        persons.add(new Person("收藏",R.drawable.ic_collections_black_24dp));
+        persons.add(new Person("设置",R.drawable.ic_settings_black_24dp));
+
+//        persons.add(new Food("Fresh Strawberries and Blackberries in Little Bowl", "BY VIKTOR HANACEK", R.drawable.food4, R.drawable.avatar3));
+//        persons.add(new Food("Baked Healthy Fitness Broccoli Pie with Basil", "BY VIKTOR HANACEK", R.drawable.food5, R.drawable.avatar4));
+        foodAdapter.setDataList(persons);
     }
 
     void loadMoreCard() {
@@ -73,6 +72,6 @@ public class PersonActivity extends AppCompatActivity {
 //        foods.add(new Food(R.drawable.food3));
 //        foods.add(new Food(R.drawable.food2));
 //        foods.add(new Food(R.drawable.food1));
-        foodAdapter.addItems(foods);
+     //   foodAdapter.addItems(foods);
     }
 }

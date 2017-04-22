@@ -57,12 +57,12 @@ public class LeftFragment extends Fragment {
         foodAdapter = new FoodAdapter();
         rv.setAdapter(foodAdapter);
 
-        final TwinklingRefreshLayout refreshLayout = (TwinklingRefreshLayout) layout.findViewById(R.id.refresh);
-//        ProgressLayout headerView = new ProgressLayout(getContext());
-        BezierLayout headerView = new BezierLayout(getActivity());
-        refreshLayout.setHeaderView(headerView);
-//        refreshLayout.setFloatRefresh(false);
-        refreshLayout.setPureScrollModeOn();
+//        final TwinklingRefreshLayout refreshLayout = (TwinklingRefreshLayout) layout.findViewById(R.id.refresh);
+////        ProgressLayout headerView = new ProgressLayout(getContext());
+//        BezierLayout headerView = new BezierLayout(getActivity());
+//        refreshLayout.setHeaderView(headerView);
+////        refreshLayout.setFloatRefresh(false);
+//        refreshLayout.setPureScrollModeOn();
 //        refreshLayout.setEnableOverlayRefreshView(false);
 //        refreshLayout.setAutoLoadMore(true);
 

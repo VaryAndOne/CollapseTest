@@ -56,43 +56,43 @@ public class MyFragment extends Fragment{
         rv.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         photoAdapter = new PhotoAdapter();
         rv.setAdapter(photoAdapter);
-        final TwinklingRefreshLayout refreshLayout = (TwinklingRefreshLayout) layout.findViewById(R.id.refresh);
-//        ProgressLayout headerView = new ProgressLayout(this);
-//        BezierLayout headerView = new BezierLayout(this);
-        BezierLayout headerView = new BezierLayout(getActivity());
-        refreshLayout.setHeaderView(headerView);
-        refreshLayout.setMaxHeadHeight(140);
-//        refreshLayout.setFloatRefresh(true);
-//        refreshLayout.setPureScrollModeOn(true);
-        refreshLayout.setOverScrollBottomShow(false);
+//        final TwinklingRefreshLayout refreshLayout = (TwinklingRefreshLayout) layout.findViewById(R.id.refresh);
+////        ProgressLayout headerView = new ProgressLayout(this);
+////        BezierLayout headerView = new BezierLayout(this);
+//        BezierLayout headerView = new BezierLayout(getActivity());
+//        refreshLayout.setHeaderView(headerView);
+//        refreshLayout.setMaxHeadHeight(140);
+////        refreshLayout.setFloatRefresh(true);
+////        refreshLayout.setPureScrollModeOn(true);
+//        refreshLayout.setOverScrollBottomShow(false);
 //        refreshLayout.setAutoLoadMore(true);
 
 //        addHeader();
         refreshCard();
 
-        refreshLayout.setOnRefreshListener(new RefreshListenerAdapter() {
-            @Override
-            public void onRefresh(final TwinklingRefreshLayout refreshLayout) {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        refreshCard();
-                        refreshLayout.finishRefreshing();
-                    }
-                }, 2000);
-            }
-
-            @Override
-            public void onLoadMore(final TwinklingRefreshLayout refreshLayout) {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        loadMoreCard();
-                        refreshLayout.finishLoadmore();
-                    }
-                }, 2000);
-            }
-        });
+//        refreshLayout.setOnRefreshListener(new RefreshListenerAdapter() {
+//            @Override
+//            public void onRefresh(final TwinklingRefreshLayout refreshLayout) {
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        refreshCard();
+//                        refreshLayout.finishRefreshing();
+//                    }
+//                }, 2000);
+//            }
+//
+//            @Override
+//            public void onLoadMore(final TwinklingRefreshLayout refreshLayout) {
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        loadMoreCard();
+//                        refreshLayout.finishLoadmore();
+//                    }
+//                }, 2000);
+//            }
+//        });
 
 //        refreshLayout.startRefresh();
     }

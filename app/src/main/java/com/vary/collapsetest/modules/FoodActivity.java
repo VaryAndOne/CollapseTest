@@ -39,8 +39,8 @@ public class FoodActivity extends AppCompatActivity {
         refreshLayout.setHeaderView(headerView);
 //        refreshLayout.setFloatRefresh(false);
         refreshLayout.setPureScrollModeOn();
-//        refreshLayout.setEnableOverlayRefreshView(false);
-//        refreshLayout.setAutoLoadMore(true);
+ //       refreshLayout.setEnableOverlayRefreshView(false);
+        refreshLayout.setAutoLoadMore(true);
 
         refreshCard();
 

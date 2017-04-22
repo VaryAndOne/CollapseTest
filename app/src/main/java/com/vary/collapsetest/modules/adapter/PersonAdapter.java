@@ -13,6 +13,7 @@ import com.vary.collapsetest.base.BaseRecyclerAdapter;
 import com.vary.collapsetest.base.CommonHolder;
 import com.vary.collapsetest.modules.widget.CircleImageView;
 import com.vary.collapsetest.mvp.model.Food;
+import com.vary.collapsetest.mvp.model.Person;
 import com.vary.collapsetest.mvp.model.Photo;
 
 import butterknife.Bind;
@@ -21,35 +22,35 @@ import butterknife.Bind;
  * Created by Administrator on 2017-04-21.
  */
 
-public class PersonAdapter extends BaseRecyclerAdapter<Food> {
+public class PersonAdapter extends BaseRecyclerAdapter<Person> {
     @Override
-    public CommonHolder<Food> setViewHolder(ViewGroup parent) {
+    public CommonHolder<Person> setViewHolder(ViewGroup parent) {
         return new PersonAdapter.CardHolder(parent.getContext(), parent);
     }
 
-    class CardHolder extends CommonHolder<Food> {
+    class CardHolder extends CommonHolder<Person> {
 
 //        @Bind(R.id.avatar)
 //        CircleImageView avatar;
 //
-//        @Bind(R.id.tv_food)
-//        TextView tv_food;
+        @Bind(R.id.tv_person)
+        TextView tv_food;
 //
 //        @Bind(R.id.tv_info)
 //        TextView tv_info;
-//
-//        @Bind(R.id.iv_food)
-//        ImageView iv_food;
+
+        @Bind(R.id.iv_person)
+        ImageView iv_food;
 
         public CardHolder(Context context, ViewGroup root) {
             super(context, root, R.layout.item_person);
         }
 
         @Override
-        public void bindData(Food food) {
+        public void bindData(Person person) {
 //            avatar.setImageResource(food.avatar_id);
-//            iv_food.setImageResource(food.imageSrc);
-//            tv_food.setText(food.title);
+            iv_food.setImageResource(person.imageSrc);
+            tv_food.setText(person.title);
 //            tv_info.setText(food.info);
 
 //            itemView.setOnClickListener(new View.OnClickListener() {
