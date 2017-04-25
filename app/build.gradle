@@ -38,4 +38,13 @@ dependencies {
     compile 'com.flying.xiaopo:sticker:1.4.0'
     compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
     compile files('libs/AMap3DMap_5.0.0_AMapSearch_5.0.0_AMapLocation_3.3.0_20170311.jar')
+    compile files('libs/MobCommons-2017.0412.1554.jar')
+    compile files('libs/MobTools-2017.0412.1554.jar')
+    compile files('libs/ShareSDK-Core-2.8.3.jar')
+    compile files('libs/ShareSDK-QQ-2.8.3.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.8.3.jar')
+    compile files('libs/ShareSDK-Wechat-2.8.3.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.8.3.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.8.3.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.8.3.jar')
 }
