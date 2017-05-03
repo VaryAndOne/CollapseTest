@@ -1,15 +1,22 @@
 package com.vary.collapsetest.modules.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vary.collapsetest.R;
+import com.vary.collapsetest.app.TkApplication;
 import com.vary.collapsetest.base.BaseRecyclerAdapter;
 import com.vary.collapsetest.base.CommonHolder;
+import com.vary.collapsetest.modules.LoginActivity;
+import com.vary.collapsetest.modules.PersonActivity;
+import com.vary.collapsetest.modules.VideoActivity;
 import com.vary.collapsetest.mvp.model.Photo;
+import com.vary.collapsetest.utilities.ToastUtil;
 
 import butterknife.Bind;
 
@@ -40,10 +47,13 @@ public class PhotoAdapter extends BaseRecyclerAdapter<Photo> {
             iv_pic.setImageResource(photo.imgSrc);
             tv_info.setText(photo.name);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            iv_pic.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-         //           ToastUtil.show("item clicked!");
+                    ToastUtil.show("item clicked!");
+                    Intent intent = new Intent(TkApplication.appContext, PersonActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    TkApplication.appContext.startActivity(intent);
                 }
             });
         }

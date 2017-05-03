@@ -56,6 +56,7 @@ public class MyFragment extends Fragment{
         rv.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         photoAdapter = new PhotoAdapter();
         rv.setAdapter(photoAdapter);
+
 //        final TwinklingRefreshLayout refreshLayout = (TwinklingRefreshLayout) layout.findViewById(R.id.refresh);
 ////        ProgressLayout headerView = new ProgressLayout(this);
 ////        BezierLayout headerView = new BezierLayout(this);
