@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.vary.collapsetest.R;
+import com.vary.collapsetest.app.TkApplication;
 import com.vary.collapsetest.base.BaseRecyclerAdapter;
 import com.vary.collapsetest.base.CommonHolder;
 import com.vary.collapsetest.modules.widget.CircleImageView;
@@ -25,6 +26,7 @@ import butterknife.Bind;
 public class PersonAdapter extends BaseRecyclerAdapter<Person> {
     @Override
     public CommonHolder<Person> setViewHolder(ViewGroup parent) {
+
         return new PersonAdapter.CardHolder(parent.getContext(), parent);
     }
 
@@ -51,6 +53,7 @@ public class PersonAdapter extends BaseRecyclerAdapter<Person> {
 //            avatar.setImageResource(food.avatar_id);
             iv_food.setImageResource(person.imageSrc);
             tv_food.setText(person.title);
+
 //            tv_info.setText(food.info);
 
 //            itemView.setOnClickListener(new View.OnClickListener() {

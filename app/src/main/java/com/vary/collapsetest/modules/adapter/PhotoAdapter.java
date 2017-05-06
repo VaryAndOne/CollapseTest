@@ -15,8 +15,13 @@ import com.vary.collapsetest.base.CommonHolder;
 import com.vary.collapsetest.modules.LoginActivity;
 import com.vary.collapsetest.modules.PersonActivity;
 import com.vary.collapsetest.modules.VideoActivity;
+import com.vary.collapsetest.modules.event.MessageEvent;
 import com.vary.collapsetest.mvp.model.Photo;
 import com.vary.collapsetest.utilities.ToastUtil;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.Bind;
 
@@ -25,6 +30,8 @@ import butterknife.Bind;
  */
 
 public class PhotoAdapter extends BaseRecyclerAdapter<Photo> {
+
+
     @Override
     public CommonHolder<Photo> setViewHolder(ViewGroup parent) {
         return new CardHolder(parent.getContext(), parent);
@@ -54,8 +61,12 @@ public class PhotoAdapter extends BaseRecyclerAdapter<Photo> {
                     Intent intent = new Intent(TkApplication.appContext, PersonActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     TkApplication.appContext.startActivity(intent);
+
                 }
             });
         }
+
+
     }
+
 }
