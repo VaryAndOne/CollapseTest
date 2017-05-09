@@ -13,6 +13,7 @@
             app:layout_scrollFlags="scroll|enterAlways|snap">
 
             <TextView
+                android:id="@+id/ec_btn_sign_up"
                 android:text="注册"
                 android:textSize="15sp"
                 android:textColor="@color/white"
