@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMGroupManager;
 import com.hyphenate.exceptions.HyphenateException;
 import com.vary.collapsetest.R;
 
@@ -41,13 +42,36 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         initView();
-
     }
 
     /**
      * 初始化界面控件
      */
     private void initView() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+//                EMGroupManager.EMGroupOptions option = new EMGroupManager.EMGroupOptions();
+//                option.maxUsers = 200;
+//                option.style = EMGroupManager.EMGroupStyle.EMGroupStylePublicOpenJoin ;
+//
+//                try {
+//                    EMClient.getInstance().groupManager().createGroup("瞎扯", "装比", new String[]{}, "", option);
+//                    Log.e(TAG,"创建群组" );
+//                } catch (HyphenateException e) {
+//                    e.printStackTrace();
+//                }
+//
+//                try {
+//                    EMClient.getInstance().groupManager().destroyGroup(	"15740650455042");//需异步处理
+//                    Log.e(TAG,"解散群组" );
+//                } catch (HyphenateException e) {
+//                    e.printStackTrace();
+//                }
+            }
+        }).start();
+
         mUsernameEdit = (EditText) findViewById(R.id.ec_edit_username);
         mPasswordEdit = (EditText) findViewById(R.id.ec_edit_password);
 

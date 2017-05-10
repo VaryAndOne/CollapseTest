@@ -34,7 +34,7 @@ public class ChatActivity extends AppCompatActivity implements EMMessageListener
     private TextView mContentText;
 
     // 当前聊天的 ID
-    private String mChatId = "test123";
+    private String mChatId = "15738040549377";
 
     private static final String TAG = ChatActivity.class.getSimpleName();
 
@@ -51,7 +51,7 @@ public class ChatActivity extends AppCompatActivity implements EMMessageListener
             public void onClick(View v) {
                 String content = mInputEdit.getText().toString();
                 EMMessage message = EMMessage.createTxtSendMessage(content, mChatId);
-                message.setChatType(EMMessage.ChatType.Chat);
+                message.setChatType(EMMessage.ChatType.GroupChat);
                 EMClient.getInstance().chatManager().sendMessage(message);
                 mContentText.setText(mContentText.getText() + "\n" + content);
                 message.setMessageStatusCallback(new EMCallBack() {
