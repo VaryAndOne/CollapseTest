@@ -82,7 +82,7 @@
             android:screenOrientation="portrait" />
         <activity android:name=".modules.PersonActivity"/>
         <activity android:name=".modules.MainActivity"/>
-        <activity android:name=".modules.ChatActivity"/>
+        <activity android:name=".modules.ECChatActivity"/>
 
 </application>
 </manifest>

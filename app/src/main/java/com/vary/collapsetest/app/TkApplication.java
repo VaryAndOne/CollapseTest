@@ -15,6 +15,7 @@ import com.github.moduth.blockcanary.BlockCanary;
 import com.github.moduth.blockcanary.BlockCanaryContext;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
+import com.hyphenate.easeui.controller.EaseUI;
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 import com.lcodecore.tkrefreshlayout.footer.BallPulseView;
 import com.lcodecore.tkrefreshlayout.header.SinaRefreshView;
@@ -60,6 +61,7 @@ public class TkApplication extends Application {
     }
 
     private void initEasemob() {
+        EaseUI.getInstance().init(appContext,null);
         EMOptions options = new EMOptions();
 // 默认添加好友时，是不需要验证的，改成需要验证
         options.setAcceptInvitationAlways(false);

@@ -10,8 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.hyphenate.chat.EMMessage;
+import com.hyphenate.easeui.EaseConstant;
 import com.vary.collapsetest.R;
-import com.vary.collapsetest.modules.ChatActivity;
+import com.vary.collapsetest.modules.ECChatActivity;
 import com.vary.collapsetest.modules.MainActivity;
 
 /**
@@ -46,7 +48,9 @@ public class RightFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // 跳转到聊天界面，开始聊天
-                Intent intent = new Intent(getActivity(), ChatActivity.class);
+                Intent intent = new Intent(getActivity(), ECChatActivity.class);
+                intent.putExtra(EaseConstant.EXTRA_USER_ID,"vary1");
+                intent.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat);
                 startActivity(intent);
             }
         });
