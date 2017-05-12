@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.EaseConstant;
@@ -23,7 +24,13 @@ import com.vary.collapsetest.modules.MainActivity;
 public class RightFragment extends Fragment {
 
     // 发起聊天
+
+    // 发起聊天 username 输入框
+    private EditText mChatIdEdit;
+    // 发起聊天
     private Button mStartChatBtn;
+    // 退出登录
+    private Button mSignOutBtn;
 
     public static RightFragment getInstance(int position){
         RightFragment myFragment = new RightFragment();
@@ -43,13 +50,15 @@ public class RightFragment extends Fragment {
             //         textView.setText("The page Selected is "+bundle.getInt("position"));
         }
         mStartChatBtn = (Button) layout.findViewById(R.id.ec_btn_start_chat);
+        mChatIdEdit = (EditText) layout.findViewById(R.id.ec_edit_chat_id);
 
         mStartChatBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // 跳转到聊天界面，开始聊天
+                String chatId = mChatIdEdit.getText().toString().trim();
                 Intent intent = new Intent(getActivity(), ECChatActivity.class);
-                intent.putExtra(EaseConstant.EXTRA_USER_ID,"vary1");
+                intent.putExtra(EaseConstant.EXTRA_USER_ID,chatId);
                 intent.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat);
                 startActivity(intent);
             }
