@@ -1,6 +1,7 @@
 package com.vary.collapsetest.modules.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +13,13 @@ import com.vary.collapsetest.R;
 import com.vary.collapsetest.app.TkApplication;
 import com.vary.collapsetest.base.BaseRecyclerAdapter;
 import com.vary.collapsetest.base.CommonHolder;
+import com.vary.collapsetest.modules.GroupActivity;
+import com.vary.collapsetest.modules.PersonActivity;
 import com.vary.collapsetest.modules.widget.CircleImageView;
 import com.vary.collapsetest.mvp.model.Food;
 import com.vary.collapsetest.mvp.model.Person;
 import com.vary.collapsetest.mvp.model.Photo;
+import com.vary.collapsetest.utilities.ToastUtil;
 
 import butterknife.Bind;
 
@@ -56,12 +60,15 @@ public class PersonAdapter extends BaseRecyclerAdapter<Person> {
 
 //            tv_info.setText(food.info);
 
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-////                    ToastUtil.show("item clicked!");
-//                }
-//            });
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ToastUtil.show("item clicked!");
+                    Intent intent = new Intent(TkApplication.appContext, GroupActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    TkApplication.appContext.startActivity(intent);
+                }
+            });
         }
     }
 }
