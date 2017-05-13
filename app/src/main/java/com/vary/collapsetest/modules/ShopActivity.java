@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.vary.collapsetest.R;
+import com.vary.collapsetest.modules.adapter.ShopAdapter;
 import com.vary.collapsetest.modules.widget.DiscreteScrollViewOptions;
 import com.vary.collapsetest.mvp.model.Item;
 import com.vary.collapsetest.mvp.model.Shop;
