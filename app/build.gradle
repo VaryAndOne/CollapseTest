@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -57,4 +58,8 @@ dependencies {
     compile 'com.google.android.exoplayer:exoplayer:r1.5.8'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile project(':EaseUI')
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.yarolegovich:discrete-scrollview:1.1.4'
+    compile 'com.android.support:preference-v7:25.3.1'
 }

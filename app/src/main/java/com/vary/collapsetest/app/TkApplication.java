@@ -20,6 +20,7 @@ import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
 import com.lcodecore.tkrefreshlayout.footer.BallPulseView;
 import com.lcodecore.tkrefreshlayout.header.SinaRefreshView;
 import com.squareup.leakcanary.LeakCanary;
+import com.vary.collapsetest.modules.widget.DiscreteScrollViewOptions;
 
 import java.util.Iterator;
 import java.util.List;
@@ -34,6 +35,7 @@ import static android.os.Build.VERSION_CODES.GINGERBREAD;
 public class TkApplication extends Application {
 
     public static Context appContext;
+    private static TkApplication instance;
 
     private static final String TAG = TkApplication.class.getSimpleName();
 
@@ -42,6 +44,7 @@ public class TkApplication extends Application {
         super.onCreate();
 
         appContext = this;
+        instance = this;
 
 //        if (LeakCanary.isInAnalyzerProcess(this)) {
 //            return;
@@ -58,6 +61,11 @@ public class TkApplication extends Application {
 //        TwinklingRefreshLayout.setDefaultFooter(BallPulseView.class.getName());
 
         initEasemob();
+        DiscreteScrollViewOptions.init(this);
+    }
+
+    public static TkApplication getInstance() {
+        return instance;
     }
 
     private void initEasemob() {
