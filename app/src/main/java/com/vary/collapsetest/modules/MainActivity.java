@@ -11,6 +11,7 @@ import com.vary.collapsetest.R;
 import com.vary.collapsetest.app.TkApplication;
 import com.vary.collapsetest.modules.adapter.MyPagerAdapter;
 import com.vary.collapsetest.modules.tabs.SlidingTabLayout;
+import com.vary.collapsetest.mvp.model.Person;
 
 public class MainActivity extends AppCompatActivity {
 

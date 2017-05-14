@@ -13,6 +13,7 @@ import com.vary.collapsetest.R;
 import com.vary.collapsetest.app.TkApplication;
 import com.vary.collapsetest.base.BaseRecyclerAdapter;
 import com.vary.collapsetest.base.CommonHolder;
+import com.vary.collapsetest.modules.FillStyleActivity;
 import com.vary.collapsetest.modules.GroupActivity;
 import com.vary.collapsetest.modules.PersonActivity;
 import com.vary.collapsetest.modules.widget.CircleImageView;
@@ -64,7 +65,7 @@ public class PersonAdapter extends BaseRecyclerAdapter<Person> {
                 @Override
                 public void onClick(View view) {
                     ToastUtil.show("item clicked!");
-                    Intent intent = new Intent(TkApplication.appContext, GroupActivity.class);
+                    Intent intent = new Intent(TkApplication.appContext, FillStyleActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     TkApplication.appContext.startActivity(intent);
                 }
