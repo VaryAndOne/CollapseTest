@@ -37,7 +37,8 @@ public class  VideoPlayerActivity extends AppCompatActivity {
         videoView = (IjkVideoView) findViewById(R.id.ijkPlayer);
         AndroidMediaController controller = new AndroidMediaController(this, false);
         videoView.setMediaController(controller);
-        String url = "https://wdl.wallstreetcn.com/41aae4d2-390a-48ff-9230-ee865552e72d";
+//        String url = "https://wdl.wallstreetcn.com/41aae4d2-390a-48ff-9230-ee865552e72d";
+        String url = "http://playertest.longtailvideo.com/adaptive/bbbfull/bbbfull.m3u8";
         // String url = "http://o6wf52jln.bkt.clouddn.com/演员.mp3";
         videoView.setVideoURI(Uri.parse(url));
         videoView.start();
