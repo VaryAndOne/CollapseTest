@@ -65,7 +65,7 @@
             android:name="com.amap.api.v2.apikey"
             android:value="eb828c6017e1e40de8650526acd7adeb"/>
 
-        <activity android:name=".modules.VideoPlayerActivity"
+        <activity android:name=".modules.LoginActivity"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

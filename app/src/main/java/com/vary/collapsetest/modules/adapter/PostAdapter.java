@@ -95,7 +95,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
                     Log.d("onItemImageClick", list.get(index));
 //                    String chatId = mChatIdEdit.getText().toString().trim();
                     Intent intent = new Intent(TkApplication.appContext, ECChatActivity.class);
-                    intent.putExtra(EaseConstant.EXTRA_USER_ID,"vary1");
+                    intent.putExtra(EaseConstant.EXTRA_USER_ID,"test123");
                     intent.putExtra(EaseConstant.EXTRA_CHAT_TYPE, EMMessage.ChatType.Chat);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     TkApplication.appContext.startActivity(intent);
