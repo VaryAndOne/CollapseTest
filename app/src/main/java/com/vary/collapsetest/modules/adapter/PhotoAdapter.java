@@ -15,6 +15,7 @@ import com.vary.collapsetest.base.CommonHolder;
 import com.vary.collapsetest.modules.LoginActivity;
 import com.vary.collapsetest.modules.PersonActivity;
 import com.vary.collapsetest.modules.VideoActivity;
+import com.vary.collapsetest.modules.VideoPlayerActivity;
 import com.vary.collapsetest.modules.event.MessageEvent;
 import com.vary.collapsetest.mvp.model.Photo;
 import com.vary.collapsetest.utilities.ToastUtil;
@@ -58,7 +59,7 @@ public class PhotoAdapter extends BaseRecyclerAdapter<Photo> {
                 @Override
                 public void onClick(View view) {
                     ToastUtil.show("item clicked!");
-                    Intent intent = new Intent(TkApplication.appContext, PersonActivity.class);
+                    Intent intent = new Intent(TkApplication.appContext, VideoPlayerActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     TkApplication.appContext.startActivity(intent);
 

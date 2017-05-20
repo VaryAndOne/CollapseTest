@@ -87,5 +87,6 @@
         <activity android:name=".modules.ECChatActivity"/>
         <activity android:name=".modules.GroupActivity"/>
         <activity android:name=".modules.FillStyleActivity"/>
+        <activity android:name=".modules.VideoPlayerActivity"/>
 </application>
 </manifest>
