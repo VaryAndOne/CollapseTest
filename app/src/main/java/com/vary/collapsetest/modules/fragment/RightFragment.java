@@ -84,7 +84,6 @@ public class RightFragment extends Fragment implements DiscreteScrollView.OnItem
         layout.findViewById(R.id.item_btn_buy).setOnClickListener(this);
         layout.findViewById(R.id.item_btn_comment).setOnClickListener(this);
 
-        layout.findViewById(R.id.home).setOnClickListener(this);
         layout.findViewById(R.id.btn_smooth_scroll).setOnClickListener(this);
         layout.findViewById(R.id.btn_transition_time).setOnClickListener(this);
         return layout;
@@ -97,9 +96,6 @@ public class RightFragment extends Fragment implements DiscreteScrollView.OnItem
                 Item current = data.get(itemPicker.getCurrentItem());
                 shop.setRated(current.getId(), !shop.isRated(current.getId()));
                 changeRateButtonState(current);
-                break;
-            case R.id.home:
-                getActivity().finish();
                 break;
 //            case R.id.btn_transition_time:
 //                DiscreteScrollViewOptions.configureTransitionTime(itemPicker);
