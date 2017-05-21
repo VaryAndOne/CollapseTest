@@ -105,31 +105,31 @@ public class MyFragment extends Fragment{
 //        foods.add(new Food("Enjoying a Tasty Burger","BY VIKTOR HANACEK",R.drawable.food3,R.drawable.avatar2));
 //        foods.add(new Food("Fresh Strawberries and Blackberries in Little Bowl","BY VIKTOR HANACEK",R.drawable.food4,R.drawable.avatar3));
 //        foods.add(new Food("Baked Healthy Fitness Broccoli Pie with Basil","BY VIKTOR HANACEK",R.drawable.food5,R.drawable.avatar4));
-        photos.add(new Photo("chest nut", R.drawable.photo1));
-        photos.add(new Photo("fish", R.drawable.photo2));
-        photos.add(new Photo("cat", R.drawable.photo10));
-        photos.add(new Photo("guitar", R.drawable.photo3));
-        photos.add(new Photo("common-hazel", R.drawable.photo4));
-        photos.add(new Photo("cherry", R.drawable.photo5));
-        photos.add(new Photo("flower details", R.drawable.photo6));
-        photos.add(new Photo("tree", R.drawable.photo7));
-        photos.add(new Photo("blue berries", R.drawable.photo8));
-        photos.add(new Photo("snow man", R.drawable.photo9));
+        photos.add(new Photo("100.00", R.drawable.photo1));
+        photos.add(new Photo("200.00", R.drawable.photo2));
+        photos.add(new Photo("300.00", R.drawable.photo10));
+        photos.add(new Photo("400.00", R.drawable.photo3));
+        photos.add(new Photo("500.00", R.drawable.photo4));
+        photos.add(new Photo("600.00", R.drawable.photo5));
+        photos.add(new Photo("700.00", R.drawable.photo6));
+        photos.add(new Photo("800.00", R.drawable.photo7));
+        photos.add(new Photo("900.00", R.drawable.photo8));
+        photos.add(new Photo("1000.00", R.drawable.photo9));
         photoAdapter.setDataList(photos);
     }
 
     void loadMoreCard() {
         List<Photo> photos = new ArrayList<>();
-        photos.add(new Photo("chest nut", R.drawable.photo1));
-        photos.add(new Photo("fish", R.drawable.photo2));
-        photos.add(new Photo("cat", R.drawable.photo10));
-        photos.add(new Photo("guitar", R.drawable.photo3));
-        photos.add(new Photo("common-hazel", R.drawable.photo4));
-        photos.add(new Photo("cherry", R.drawable.photo5));
-        photos.add(new Photo("flower details", R.drawable.photo6));
-        photos.add(new Photo("tree", R.drawable.photo7));
-        photos.add(new Photo("blue berries", R.drawable.photo8));
-        photos.add(new Photo("snow man", R.drawable.photo9));
+        photos.add(new Photo("100.00", R.drawable.photo1));
+        photos.add(new Photo("200.00", R.drawable.photo2));
+        photos.add(new Photo("300.00", R.drawable.photo10));
+        photos.add(new Photo("400.00", R.drawable.photo3));
+        photos.add(new Photo("500.00", R.drawable.photo4));
+        photos.add(new Photo("600.00", R.drawable.photo5));
+        photos.add(new Photo("700.00", R.drawable.photo6));
+        photos.add(new Photo("800.00", R.drawable.photo7));
+        photos.add(new Photo("900.00", R.drawable.photo8));
+        photos.add(new Photo("1000.00", R.drawable.photo9));
         //chest nut   cat and fish  guitar   common-hazel  cherry   flower details   tree
         //blue berries   snow man
 //        foods.add(new Food(R.drawable.food3));
