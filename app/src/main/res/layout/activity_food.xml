@@ -5,17 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_wood" />
-
-    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
-        android:id="@+id/refresh"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
@@ -23,6 +12,5 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:overScrollMode="never" />
 
-    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
 
 </RelativeLayout>
