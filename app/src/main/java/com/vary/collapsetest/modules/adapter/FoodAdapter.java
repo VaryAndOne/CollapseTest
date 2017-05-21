@@ -29,9 +29,6 @@ public class FoodAdapter extends BaseRecyclerAdapter<Food> {
         @Bind(R.id.avatar)
         CircleImageView avatar;
 
-        @Bind(R.id.tv_food)
-        TextView tv_food;
-
         @Bind(R.id.tv_info)
         TextView tv_info;
 
@@ -46,7 +43,6 @@ public class FoodAdapter extends BaseRecyclerAdapter<Food> {
         public void bindData(Food food) {
             avatar.setImageResource(food.avatar_id);
             iv_food.setImageResource(food.imageSrc);
-            tv_food.setText(food.title);
             tv_info.setText(food.info);
 
             itemView.setOnClickListener(new View.OnClickListener() {

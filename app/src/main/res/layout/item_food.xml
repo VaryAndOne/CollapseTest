@@ -32,6 +32,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#CCF6FD"
             android:orientation="vertical">
 
             <com.vary.collapsetest.modules.widget.CircleImageView
@@ -50,26 +51,17 @@
                 android:layout_toRightOf="@+id/avatar"
                 android:orientation="vertical">
 
-                <!--#665555-->
-                <TextView
-                    android:id="@+id/tv_food"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:singleLine="true"
-                    android:text="Preparing Salmon Steak Close Up"
-                    android:textColor="#745D5C"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
                 <!--#A9AAAA-->
+
                 <TextView
                     android:id="@+id/tv_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:text="Justin Bieber"
+                    android:layout_margin="3dp"
+                    android:text=" 400.00"
                     android:textColor="#D9AD84"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_priority_high_white_24dp"
                     android:textSize="14sp" />
             </LinearLayout>
 

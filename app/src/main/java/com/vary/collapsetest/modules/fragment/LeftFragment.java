@@ -72,11 +72,11 @@ public class LeftFragment extends Fragment {
 
     void refreshCard() {
         List<Food> foods = new ArrayList<>();
-        foods.add(new Food("Preparing Salmon Steak Close Up", "BY VIKTOR HANACEK", R.drawable.food1, R.drawable.avatar0));
-        foods.add(new Food("Fresh & Healthy Fitness Broccoli Pie with Basil", "BY VIKTOR HANACEK", R.drawable.food2, R.drawable.avatar1));
-        foods.add(new Food("Enjoying a Tasty Burger", "BY VIKTOR HANACEK", R.drawable.food3, R.drawable.avatar2));
-        foods.add(new Food("Fresh Strawberries and Blackberries in Little Bowl", "BY VIKTOR HANACEK", R.drawable.food4, R.drawable.avatar3));
-        foods.add(new Food("Baked Healthy Fitness Broccoli Pie with Basil", "BY VIKTOR HANACEK", R.drawable.food5, R.drawable.avatar4));
+        foods.add(new Food("Preparing Salmon Steak Close Up", "400.00", R.drawable.food1, R.drawable.avatar0));
+        foods.add(new Food("Fresh & Healthy Fitness Broccoli Pie with Basil", "600.00", R.drawable.food2, R.drawable.avatar1));
+        foods.add(new Food("Enjoying a Tasty Burger", "400.00", R.drawable.food3, R.drawable.avatar2));
+        foods.add(new Food("Fresh Strawberries and Blackberries in Little Bowl", "200.00", R.drawable.food4, R.drawable.avatar3));
+        foods.add(new Food("Baked Healthy Fitness Broccoli Pie with Basil", "1000.00", R.drawable.food5, R.drawable.avatar4));
         foodAdapter.setDataList(foods);
     }
 
