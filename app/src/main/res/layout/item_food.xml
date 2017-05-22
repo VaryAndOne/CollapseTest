@@ -64,15 +64,6 @@
                     android:drawableLeft="@drawable/ic_priority_high_white_24dp"
                     android:textSize="14sp" />
             </LinearLayout>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="16dp"
-                android:src="@drawable/play" />
-
         </RelativeLayout>
     </LinearLayout>
 
