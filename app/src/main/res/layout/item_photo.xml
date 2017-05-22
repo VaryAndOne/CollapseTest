@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="2dp"
-    app:cardElevation="0dp"
-    app:cardUseCompatPadding="true">
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    >
 
     <com.andexert.library.RippleView
         android:id="@+id/more"
