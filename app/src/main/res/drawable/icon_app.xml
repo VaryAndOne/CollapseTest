@@ -12,9 +12,6 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@android:id/background"
-        android:drawable="@drawable/app_icon_background"/>
-    <item
         android:id="@android:id/secondaryProgress"
         android:drawable="@drawable/app_icon_normal"/>
     <item
