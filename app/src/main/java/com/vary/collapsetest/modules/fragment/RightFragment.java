@@ -41,9 +41,7 @@ public class RightFragment extends Fragment implements DiscreteScrollView.OnItem
     private List<Item> data;
     private Shop shop;
 
-    private TextView currentItemName;
     private TextView currentItemPrice;
-    private ImageView rateItemButton;
     private DiscreteScrollView itemPicker;
 
     public static RightFragment getInstance(int position){
@@ -63,9 +61,7 @@ public class RightFragment extends Fragment implements DiscreteScrollView.OnItem
         if (bundle != null) {
             //         textView.setText("The page Selected is "+bundle.getInt("position"));
         }
-        currentItemName = (TextView) layout.findViewById(R.id.item_name);
         currentItemPrice = (TextView) layout.findViewById(R.id.item_price);
-        rateItemButton = (ImageView) layout.findViewById(R.id.item_btn_rate);
 
         shop = Shop.get();
         data = shop.getData();
@@ -79,30 +75,13 @@ public class RightFragment extends Fragment implements DiscreteScrollView.OnItem
                 .build());
 
         onItemChanged(data.get(0));
-
-        layout.findViewById(R.id.item_btn_rate).setOnClickListener(this);
-        layout.findViewById(R.id.item_btn_buy).setOnClickListener(this);
-        layout.findViewById(R.id.item_btn_comment).setOnClickListener(this);
-
-        layout.findViewById(R.id.btn_smooth_scroll).setOnClickListener(this);
-        layout.findViewById(R.id.btn_transition_time).setOnClickListener(this);
         return layout;
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.item_btn_rate:
-                Item current = data.get(itemPicker.getCurrentItem());
-                shop.setRated(current.getId(), !shop.isRated(current.getId()));
-                changeRateButtonState(current);
-                break;
-//            case R.id.btn_transition_time:
-//                DiscreteScrollViewOptions.configureTransitionTime(itemPicker);
-//                break;
-            case R.id.btn_smooth_scroll:
-                DiscreteScrollViewOptions.smoothScrollToUserSelectedPosition(itemPicker, v);
-                break;
+
             default:
                 showUnsupportedSnackBar();
                 break;
@@ -110,19 +89,7 @@ public class RightFragment extends Fragment implements DiscreteScrollView.OnItem
     }
 
     private void onItemChanged(Item item) {
-        currentItemName.setText(item.getName());
         currentItemPrice.setText(item.getPrice());
-        changeRateButtonState(item);
-    }
-
-    private void changeRateButtonState(Item item) {
-        if (shop.isRated(item.getId())) {
-            rateItemButton.setImageResource(R.drawable.ic_star_black_24dp);
-            rateItemButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.shopRatedStar));
-        } else {
-            rateItemButton.setImageResource(R.drawable.ic_star_border_black_24dp);
-            rateItemButton.setColorFilter(ContextCompat.getColor(getActivity(), R.color.shopSecondary));
-        }
     }
 
     @Override
