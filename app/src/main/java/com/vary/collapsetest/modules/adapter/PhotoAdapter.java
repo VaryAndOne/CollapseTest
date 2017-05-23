@@ -14,7 +14,6 @@ import com.vary.collapsetest.base.BaseRecyclerAdapter;
 import com.vary.collapsetest.base.CommonHolder;
 import com.vary.collapsetest.modules.LoginActivity;
 import com.vary.collapsetest.modules.PersonActivity;
-import com.vary.collapsetest.modules.VideoActivity;
 import com.vary.collapsetest.modules.VideoPlayerActivity;
 import com.vary.collapsetest.modules.event.MessageEvent;
 import com.vary.collapsetest.mvp.model.Photo;

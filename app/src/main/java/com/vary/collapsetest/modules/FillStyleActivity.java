@@ -43,13 +43,9 @@ public class FillStyleActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-
         setContentView(R.layout.activity_recycler);
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-
         mRvPostLister = (RecyclerView) findViewById(R.id.rv_post_list);
         mRvPostLister.setLayoutManager(new GridLayoutManager(this,3));
-
         mPostList = new ArrayList<>();
         List<String> imgUrls = new ArrayList<>();
         imgUrls.addAll(Arrays.asList(IMG_URL_LIST));
@@ -61,4 +57,5 @@ public class FillStyleActivity extends BaseActivity {
         mPostAdapter = new PostAdapter(this, mPostList, NineGridImageView.STYLE_FILL);
         mRvPostLister.setAdapter(mPostAdapter);
     }
+
 }

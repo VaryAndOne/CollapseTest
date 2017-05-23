@@ -34,7 +34,6 @@ public class PersonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person);
         setupRecyclerView((RecyclerView) findViewById(R.id.recyclerview));
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     private void setupRecyclerView(RecyclerView rv) {
@@ -47,11 +46,11 @@ public class PersonActivity extends AppCompatActivity {
 
     void refreshCard() {
         List<Person> persons = new ArrayList<>();
-        persons.add(new Person("相册",R.drawable.ic_camera_alt_black_24dp));
+        persons.add(new Person("我的",R.drawable.ic_camera_alt_black_24dp));
         persons.add(new Person("群组",R.drawable.ic_group_black_24dp));
         persons.add(new Person("收藏",R.drawable.ic_collections_black_24dp));
+        persons.add(new Person("清除缓存",R.drawable.ic_delete_sweep_black_24dp));
         persons.add(new Person("设置",R.drawable.ic_settings_black_24dp));
-
 //        persons.add(new Food("Fresh Strawberries and Blackberries in Little Bowl", "BY VIKTOR HANACEK", R.drawable.food4, R.drawable.avatar3));
 //        persons.add(new Food("Baked Healthy Fitness Broccoli Pie with Basil", "BY VIKTOR HANACEK", R.drawable.food5, R.drawable.avatar4));
         foodAdapter.setDataList(persons);
