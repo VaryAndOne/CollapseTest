@@ -23,13 +23,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:src="@drawable/ic_group_black_svg_24dp"
-            android:padding="5dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
             android:src="@drawable/ic_share_black_svg_24dp"
             android:padding="5dp"/>
 
