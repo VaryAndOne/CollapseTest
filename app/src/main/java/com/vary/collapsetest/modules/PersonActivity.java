@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.WindowManager;
 
 import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
@@ -39,9 +40,10 @@ public class PersonActivity extends AppCompatActivity {
     private void setupRecyclerView(RecyclerView rv) {
         rv.setLayoutManager(new LinearLayoutManager(rv.getContext()));
         foodAdapter = new PersonAdapter();
+        View view = View.inflate(this, R.layout.item_head, null);
+        foodAdapter.setHeadHolder(view);
         rv.setAdapter(foodAdapter);
         refreshCard();
-
     }
 
     void refreshCard() {

@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/tv_person"
             android:text="相册"
-            android:textColor="#000"
+            android:textColor="#a000"
             android:layout_marginLeft="25dp"
             android:layout_weight="1"
             android:layout_width="0dp"
