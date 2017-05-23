@@ -25,13 +25,13 @@ public class  VideoPlayerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_player);
-        Button button = (Button) findViewById(R.id.fullscreen);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setOrientation(getResources().getConfiguration().orientation);
-            }
-        });
+//        Button button = (Button) findViewById(R.id.fullscreen);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setOrientation(getResources().getConfiguration().orientation);
+//            }
+//        });
         IjkMediaPlayer.loadLibrariesOnce(null);
         IjkMediaPlayer.native_profileBegin("libijkplayer.so");
         videoView = (IjkVideoView) findViewById(R.id.ijkPlayer);
