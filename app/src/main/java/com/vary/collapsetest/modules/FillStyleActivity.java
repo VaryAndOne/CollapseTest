@@ -54,7 +54,7 @@ public class FillStyleActivity extends BaseActivity {
             mPostList.add(post);
         }
 
-        mPostAdapter = new PostAdapter(this, mPostList, NineGridImageView.STYLE_FILL);
+        mPostAdapter = new PostAdapter(this, mPostList, NineGridImageView.STYLE_GRID);
         mRvPostLister.setAdapter(mPostAdapter);
     }
 

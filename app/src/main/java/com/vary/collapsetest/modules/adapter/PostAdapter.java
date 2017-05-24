@@ -65,7 +65,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
     public class PostViewHolder extends RecyclerView.ViewHolder {
         private NineGridImageView<String> mNglContent;
-        private TextView mTvContent;
 
         private NineGridImageViewAdapter<String> mAdapter = new NineGridImageViewAdapter<String>() {
             @Override
@@ -86,7 +85,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         public PostViewHolder(View itemView) {
             super(itemView);
-            mTvContent = (TextView) itemView.findViewById(R.id.tv_content);
             mNglContent = (NineGridImageView<String>) itemView.findViewById(R.id.ngl_images);
             mNglContent.setAdapter(mAdapter);
             mNglContent.setItemImageClickListener(new ItemImageClickListener<String>() {
@@ -105,8 +103,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         public void bind(Post post) {
             mNglContent.setImagesData(post.getImgUrlList());
-            mTvContent.setText(post.getContent());
-
             Log.d("jaeger", "九宫格高度: " + mNglContent.getMeasuredHeight());
             Log.d("jaeger", "item 高度: " + itemView.getMeasuredHeight());
         }
