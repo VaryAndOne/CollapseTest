@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#fff"
+    android:paddingTop="25dp"
     android:orientation="vertical">
 
     <com.vary.collapsetest.modules.widget.CircleImageView
@@ -12,6 +13,7 @@
         android:layout_height="46dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="28dp"
+        android:layout_marginTop="25dp"
         android:src="@drawable/avatar1" />
 
     <LinearLayout
