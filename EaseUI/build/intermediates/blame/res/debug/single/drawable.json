@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\CollapseTest\\EaseUI\\src\\main\\res\\drawable\\ease_btn_blue_selector.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\CollapseTest\\EaseUI\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_btn_blue_normal_shape.xml",
-        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\CollapseTest\\EaseUI\\src\\main\\res\\drawable\\ease_btn_blue_normal_shape.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\CollapseTest\\EaseUI\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_search_clear.xml",
         "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\CollapseTest\\EaseUI\\src\\main\\res\\drawable\\ease_search_clear.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\CollapseTest\\EaseUI\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_btn_blue_normal_shape.xml",
+        "source": "C:\\Users\\Administrator\\AndroidStudioProjects\\CollapseTest\\EaseUI\\src\\main\\res\\drawable\\ease_btn_blue_normal_shape.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\AndroidStudioProjects\\CollapseTest\\EaseUI\\build\\intermediates\\res\\merged\\debug\\drawable\\ease_msg_state_failed_resend.xml",

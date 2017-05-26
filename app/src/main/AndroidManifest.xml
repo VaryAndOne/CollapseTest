@@ -65,7 +65,8 @@
             android:name="com.amap.api.v2.apikey"
             android:value="eb828c6017e1e40de8650526acd7adeb"/>
 
-        <activity android:name=".modules.LoginActivity"
+        <activity android:name=".modules.MainActivity"
+            android:launchMode="singleTask"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -82,11 +83,11 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity android:name=".modules.PersonActivity"/>
-        <activity android:name=".modules.MainActivity"
-            android:launchMode="singleTask"/>
         <activity android:name=".modules.ECChatActivity"/>
         <activity android:name=".modules.GroupActivity"/>
         <activity android:name=".modules.FillStyleActivity"/>
-        <activity android:name=".modules.VideoPlayerActivity"/>
+        <activity android:name=".modules.CameraActivity"/>
+        <activity android:name=".modules.VideoPlayerActivity"
+            android:launchMode="singleInstance"/>
 </application>
 </manifest>
