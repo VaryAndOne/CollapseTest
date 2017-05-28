@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -37,8 +38,10 @@ public class  VideoPlayerActivity extends AppCompatActivity {
         videoView = (IjkVideoView) findViewById(R.id.ijkPlayer);
         AndroidMediaController controller = new AndroidMediaController(this, false);
         videoView.setMediaController(controller);
-        String url = "https://wdl.wallstreetcn.com/41aae4d2-390a-48ff-9230-ee865552e72d";
+//        String url = "https://wdl.wallstreetcn.com/41aae4d2-390a-48ff-9230-ee865552e72d";
 //         String url = "http://o6wf52jln.bkt.clouddn.com/演员.mp3";
+         String url = Environment.getExternalStorageDirectory().getAbsolutePath() + "/"
+                 +"wsffmpegcamera.mp4";
         videoView.setVideoURI(Uri.parse(url));
         videoView.start();
     }
